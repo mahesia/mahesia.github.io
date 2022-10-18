@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
+    "background":"#f7f0f0",
     "width": 500,
     "height": 450,
     "title": "Power Plant Locations in South-East Asia (2017)",
