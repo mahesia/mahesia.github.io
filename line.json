@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"#f7f0f0",
+    "data": {
+        "url":"https://raw.githubusercontent.com/achromm/assignment-2/main/ASEAN%20SHARE%20and%20absolute.csv"
+    },    
+    "width": 300,
+    "height": 270,
+    "mark": "line",
+    "title":"Share of Renewable energy used for electricity (2000-2020)",
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {"title": "Year"}
+        },
+        "y": {"field": "Renewable %", "type": "quantitative"},
+        "color":{"field":"Country Name","legend":{
+            "orient":"left"
+        }
+    },
+        "tooltip":[
+            {"field": "Country Name", "type": "nominal"},
+            {"field": "Renewable %", "type": "quantitative"},
+            {"field": "Year", "type": "ordinal"}
+        ]
+        
+    }
+}

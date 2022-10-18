@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    
+    
+    <title>Power plants in South East Asia </title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="website.css">
+    <style>
+      body{
+        width: 1000px;
+        background-color: white;
+      }
+      div{
+        width: 1000px;
+        background-color: wheat;
+      }
+    </style>
+</head>
+
+<body>
+    <div>
+    <h1 style="background-color: wheat;">
+        <br> Power Plants in South East Asia
+    </h1>
+
+    <p>
+        In light of the rising temperature of the earth due to the greenhouse effect caused by the large amounts of carbon dioxide gases released all over the world, many countries are attempting to switch over from fossil based fuels in  favor of alternative renewable fuels to produce their electricity
+        to reduce carbon dioxide emissions. However, alternative methods to produce electricity are not as reliable due to them being more dependant on external factors such as the weather, which makes it difficult to persuade countries to switch over from fossil fuels. This visualization will show the development of power plants that use renewable sources to produce electricity in South-East Asian countries.
+    </p>
+    
+    <h3>
+    <div id="un" style="background-color:wheat;">
+        <script>
+          const spec = "hell.json";
+            vegaEmbed("#un", spec)
+              // result.view provides access to the Vega View API
+            .then(result => console.log(result))
+            .catch(console.warn);
+        </script>
+      </div>
+    </h3>
+    <p id="mark">
+        For countries such as Cambodia, Myanmar, and Laos, 49% and more of the electricity produced are from renewable sources.
+                In Indonesia, Malaysia, Thailand, and Philipines, there seems to be an increase in electricity produced by renewable sources.
+                Laos seem to produced 90% and more of its electricity from renewable sources, despite many of the renewable technologies being relatively new.
+                It is possible that there are fossil-fuel based power plants between 2000 and 2014 that were not registered.
+    </p>
+
+    <div class="row">
+        <div class="column" style="background-color:wheat;">
+            
+            <p id="hello">
+                The most commonly used renewable source are Hydro, solar, and geothermal power.
+               These countries have many sources of flowing water such as rivers and waterfalls that can be used for Hydro power.
+                Many countries here, such as Indonesia, also have many volcanoes and areas suitable for geothermal power plants.
+                Solar power is the easiest to implement. However, the frequent rains makes this source less effective.
+              </p>
+              <div id="bar1" class="column">
+                <script>
+                    const spec1 = "bar.json";
+                      vegaEmbed("#bar1", spec1)
+                        // result.view provides access to the Vega View API
+                      .then(result => console.log(result))
+                      .catch(console.warn);
+                  </script>
+              </div>
+        </div>
+        <div class="column" style="background-color:wheat;">
+            <p id="hello">
+                In Thailand, most of the powerplants on the map seem to be from solar power. However, 85% of the country's electrical power still originate from Fossil-fuel based power plants.
+                Similarly, Vietnam seem to have lots of hydro power plants, despite 63% of the country's electricity originating from fossil fuels. This shows that renewable sources still need more improvement to catch up to traditional fossil fuel power plants.
+                
+            </p>
+            <div id="line" class="column">
+                <script>
+                    const spec2 = "line.json";
+                      vegaEmbed("#line", spec2)
+                        // result.view provides access to the Vega View API
+                      .then(result => console.log(result))
+                      .catch(console.warn);
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

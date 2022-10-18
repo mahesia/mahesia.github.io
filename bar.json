@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background":"#f7f0f0",
+    "data": {
+        "url":"https://raw.githubusercontent.com/achromm/assignment-2/main/Book1.csv"
+    },
+    "width": 440,
+    "height": 240,
+    "mark": "bar",
+    "title":"Number of Power Plants by Energy Type (2017)",
+    "encoding": {
+        "x": {
+            "field": "Energy Source",
+            "type": "nominal",
+            "axis": {"title": "Energy Source"}
+        },
+        "y": {"field": "Amount of Power Plants", "type": "quantitative"},
+        
+        "tooltip":[
+            {"field": "Energy Source", "type": "nominal"},
+            {"field": "Amount of Power Plants", "type": "quantitative"}
+        ]
+        
+    }
+}
